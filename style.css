@@ -1,0 +1,41 @@
+body {
+  font-family: sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+section {
+  margin: 10px;
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+#interns, #companies {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+
+/* CSS */
+
+div#interns div.interns img {
+      height: 90px;
+}
+.intern img {
+  margin: 10px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  width: 100px; /* ปรับความกว้าง */
+  height: auto; /* ปรับความสูงให้อัตโนมัติเพื่อรักษาสัดส่วน */
+}
+
+.intern img {
+  margin: 10px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  width: 100px; /* ปรับความกว้าง */
+  height: auto; /* ปรับความสูงให้อัตโนมัติเพื่อรักษาสัดส่วน */
+}
