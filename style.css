@@ -1,41 +1,122 @@
 body {
-  font-family: sans-serif;
+    font-family: sans-serif;
+    margin: auto;
+    background: #E0F4FD;
 }
 
 h1 {
-  text-align: center;
+    text-align: center;
 }
 
 section {
-  margin: 10px;
-  padding: 20px;
-  border: 1px solid #ccc;
+    margin: 10px auto;
+    /* ปรับให้ section มีระยะห่างด้านบนและด้านล่าง และจัดตำแหน่งตามแนวนอนตรงกลาง */
+    padding: 20px;
+    border: 1px solid #ccc;
+    width: 80%;
+    /* กำหนดความกว้างของ section */
+    box-sizing: border-box;
+    /* ให้ padding และ border ไม่นับเข้าไปในความกว้างทั้งหมด */
 }
 
-#interns, #companies {
-  display: flex;
-  flex-wrap: wrap;
+#interns,
+#companies {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background: #ddd;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    align-content: space-between;
+}
+
+.intern,
+.company {
+    flex-basis: calc(33.33% - 20px);
+    /* กำหนดให้แต่ละรายการใน flex container มีขนาดเท่ากันและมีระยะห่างระหว่างรายการ */
+    margin: 10px;
+    /* ระยะห่างรอบๆรายการ */
+    padding: 20px;
+    border: 1px solid #ddd;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.intern img,
+.company img {
+    margin-bottom: 10px;
+    /* ระยะห่างด้านล่างของรูปภาพ */
+    width: 100px;
+    /* กำหนดความกว้างของรูปภาพ */
+    height: auto;
+    /* ปรับความสูงให้อัตโนมัติเพื่อรักษาสัดส่วน */
+}
+
+.company img {
+    width: 150px;
+    /* กำหนดความกว้างของรูปภาพของบริษัท */
 }
 
 
+/* เพิ่มสไตล์เพิ่มเติมใน CSS */
 
-/* CSS */
-
-div#interns div.interns img {
-      height: 90px;
-}
-.intern img {
-  margin: 10px;
-  padding: 20px;
-  border: 1px solid #ddd;
-  width: 100px; /* ปรับความกว้าง */
-  height: auto; /* ปรับความสูงให้อัตโนมัติเพื่อรักษาสัดส่วน */
+.form-container {
+    display: inline-flex;
+    justify-content: space-around;
 }
 
-.intern img {
-  margin: 10px;
-  padding: 20px;
-  border: 1px solid #ddd;
-  width: 100px; /* ปรับความกว้าง */
-  height: auto; /* ปรับความสูงให้อัตโนมัติเพื่อรักษาสัดส่วน */
+#addInternForm,
+#addCompanyForm {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #ddd;
+    margin-top: 0;
+    /* ลบ margin-top ที่นี่ */
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    align-items: center;
+}
+
+input[type="text"],
+input[type="url"] {
+    width: calc(100% - 12px);
+    /* ปรับขนาดของช่อง input ให้เต็มกว่าช่อง label นิดหน่อย */
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    /* ให้ padding และ border ไม่นับเข้าไปในความกว้างทั้งหมด */
+}
+
+input[type="text"]:focus,
+input[type="url"]:focus {
+    outline: none;
+    border-color: #007bff;
+    /* เปลี่ยนสีเมื่อมีการโฟกัส */
+}
+
+button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+    /* เปลี่ยนสีเมื่อเม้าส์ hover */
 }
